@@ -27,7 +27,7 @@ class Problems extends Component {
 
   getProblems = async () => {
     const token = Cookies.get("jwt_token")
-    const response = await fetch("http://localhost:5000/api/problems", {
+    const response = await fetch("https://hireloop-server-production.up.railway.app/api/problems", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -48,7 +48,7 @@ class Problems extends Component {
     }
 
     const token = Cookies.get("jwt_token")
-    const response = await fetch("http://localhost:5000/api/problems", {
+    const response = await fetch("https://hireloop-server-production.up.railway.app/api/problems", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,

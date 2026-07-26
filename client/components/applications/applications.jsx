@@ -25,7 +25,7 @@ class Applications extends Component {
 
   getApplications = async () => {
     const token = Cookies.get("jwt_token")
-    const response = await fetch("http://localhost:5000/api/applications", {
+    const response = await fetch("https://hireloop-server-production.up.railway.app/api/applications", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -46,7 +46,7 @@ class Applications extends Component {
     }
 
     const token = Cookies.get("jwt_token")
-    const response = await fetch("http://localhost:5000/api/applications", {
+    const response = await fetch("https://hireloop-server-production.up.railway.app/api/applications", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -79,7 +79,7 @@ class Applications extends Component {
 
   onUpdateStatus = async (id, newStatus) => {
     const token = Cookies.get("jwt_token")
-    await fetch(`http://localhost:5000/api/applications/${id}`, {
+    await fetch(`https://hireloop-server-production.up.railway.app/api/applications/${id}`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -92,7 +92,7 @@ class Applications extends Component {
 
   onDelete = async id => {
     const token = Cookies.get("jwt_token")
-    await fetch(`http://localhost:5000/api/applications/${id}`, {
+    await fetch(`https://hireloop-server-production.up.railway.app/api/applications/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,

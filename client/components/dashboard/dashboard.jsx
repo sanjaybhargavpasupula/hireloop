@@ -17,12 +17,13 @@ class Dashboard extends Component {
 
   componentDidMount() {
     this.getDashboard();
+
   }
   getDashboard = async () => {
     const token = Cookies.get("jwt_token");
-    const statsUrl = "http://localhost:5000/api/problems/stats";
-    const applicationsUrl = "http://localhost:5000/api/applications";
-    const problemsUrl = "http://localhost:5000/api/problems";
+    const statsUrl = "https://hireloop-server-production.up.railway.app/api/problems/stats";
+    const applicationsUrl = "https://hireloop-server-production.up.railway.app/api/applications";
+    const problemsUrl = "https://hireloop-server-production.up.railway.app0/api/problems";
     const statsResponse = await fetch(statsUrl, {
       method: "GET",
       headers: {
