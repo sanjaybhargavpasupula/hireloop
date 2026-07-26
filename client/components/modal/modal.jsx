@@ -27,7 +27,7 @@ class AddProblemModal extends Component {
     this.setState({ isLoading: true })
     const token = Cookies.get("jwt_token")
 
-    const response = await fetch("http://localhost:5000/api/problems", {
+    const response = await fetch("hhttps://hireloop-server-production.up.railway.app/api/problems", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${token}`,

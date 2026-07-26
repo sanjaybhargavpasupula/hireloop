@@ -23,7 +23,7 @@ class Login extends Component {
   event.preventDefault()
   const { email, password } = this.state
 
-  const url = "http://localhost:5000/api/auth/login"
+  const url = "https://hireloop-server-production.up.railway.app/api/auth/login"
   const userDetails = { email, password }
   const options = {
     method: "POST",

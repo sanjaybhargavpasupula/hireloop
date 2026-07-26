@@ -51,7 +51,7 @@ class Register extends Component {
 
     this.setState({ isLoading: true })
 
-    const url = "http://localhost:5000/api/auth/register"
+    const url = "https://hireloop-server-production.up.railway.app/api/auth/register"
     const userDetails = { name, email, password }
     const options = {
       method: "POST",
@@ -101,9 +101,7 @@ class Register extends Component {
             <p className="regpara">Start tracking your placement journey today</p>
           </div>
 
-          <div className="reg-badge">
-            🎯 Already used by 500+ placement students
-          </div>
+          
 
           <form onSubmit={this.getData}>
             <label htmlFor="name" className="reglabel">Full Name</label>
