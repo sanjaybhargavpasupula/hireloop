@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import Login from "../components/login/login";
 import Register from "../components/register/register";
 import ProtectedRoute from "../components/protectedroute/protectedroute";
@@ -8,7 +8,7 @@ import Applications from "../components/applications/applications";
 import NotFound from "../components/notfound/notfound";
 
 const App = () => (
-  <BrowserRouter>
+  <HashRouter>
     <Switch>
       <Route exact path="/login" component={Login} />
       <Route exact path="/register" component={Register} />
@@ -18,6 +18,6 @@ const App = () => (
       <Route path="/not-found" component={NotFound} />
       <Redirect to="/login" />
     </Switch>
-  </BrowserRouter>
+  </HashRouter>
 );
 export default App;
